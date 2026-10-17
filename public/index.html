@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Ouvrir une activité de technologie avec son code.">
+  <title>JM Techno</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./links-data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>JM Techno</h1>
+    <form id="activity-form" novalidate>
+      <label for="activity-code">Code activité</label>
+      <div class="entry">
+        <input id="activity-code" name="code" type="text" placeholder="301"
+          maxlength="24" autocomplete="off" autocapitalize="none" spellcheck="false"
+          enterkeyhint="go" aria-describedby="feedback" required>
+        <button type="submit">Ouvrir <span aria-hidden="true">↗</span></button>
+      </div>
+      <p id="feedback" role="alert" aria-atomic="true"></p>
+    </form>
+    <noscript>Active JavaScript pour ouvrir ton activité.</noscript>
+  </main>
+</body>
+</html>

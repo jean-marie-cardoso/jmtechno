@@ -1,0 +1,7 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex"><title>Code introuvable · JM Techno</title><style>body{font-family:Arial,sans-serif;margin:0;min-height:100dvh;display:grid;place-content:center;text-align:center;background:#f4f6ef;color:#234437;padding:20px}h1{font-size:24px}a{color:inherit;font-size:18px}</style></head><body><h1>Code introuvable.</h1><a id="home" href="/">Saisir un autre code</a><script>
+const base=location.hostname==='jean-marie-cardoso.github.io'?'/jmtechno/':'/';
+document.getElementById('home').href=base;
+let code=location.pathname.replace(/^\/jmtechno\//,'/').replace(/^\/+|\/+$/g,'').toLowerCase();
+const nested=/^([345])\/(\d{2})$/.exec(code);if(nested)code=nested[1]+nested[2];
+if(/^(?:b?[345]\d{2}|[a-z]{2,12})$/.test(code)){const script=document.createElement('script');script.src=base+'links-data.js';script.onload=()=>{const found=[...(window.JMTechnoLinks||[]),...(window.JMTechnoShortcuts||[])].find(item=>item.code===code);if(found)location.replace(found.url);};document.head.append(script);}
+</script></body></html>
